@@ -51,7 +51,14 @@ get_engine() {
 
 vars=$(echo "$(get_engine)" | sed "s/|/\n/g")
 while IFS= read -r line; do
-    result="${result}echo ---$line---; tmux save-buffer - | xargs -I{} python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) --phonetic {}; echo ''; "
+    title="echo --- translator engine: $line ---;"
+    quitTip="echo '\n--- Press Ctrl+C or Esc to close window ---';"
+    if [ -f $CURRENT_DIR/engine/translator.py ]; then
+        result="tmux save-buffer - | xargs -I{} python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) --phonetic {};"
+    else
+        result="echo Error: Please setup engine first!;"
+    fi
+    result=$title$result$quitTip
 done <<< "$vars"
 #result="${result}read -r"
 
