@@ -54,7 +54,7 @@ while IFS= read -r line; do
     title="echo --- translator engine: $line ---;"
     quitTip="echo '\n--- Press Ctrl+C or Esc to close window ---';"
     if [ -f $CURRENT_DIR/engine/translator.py ]; then
-        result="tmux save-buffer - | xargs -I{} python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) --phonetic {};"
+        result="tmux save-buffer - | tr '[:upper:]' '[:lower:]' | xargs -I{} python $CURRENT_DIR/engine/translator.py --engine=$line --from=$(get_from) --to=$(get_to) --phonetic {};"
     else
         result="echo Error: Please setup engine first!;"
     fi
