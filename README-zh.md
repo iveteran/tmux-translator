@@ -1,4 +1,4 @@
-![](https://gitlab.com/iveteran/img/-/raw/master/translator.png)
+![Screenshot](https://github.com/iveteran/tmux-translator/blob/master/screenshots/tmux-translator.png?raw=true)
 
 # 安装
 

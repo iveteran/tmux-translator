@@ -1,6 +1,6 @@
 [English](./README.md) | [中文](./README-zh.md)
 
-![](https://gitlab.com/iveteran/img/-/raw/master/translator.png)
+![Screenshot](https://github.com/iveteran/tmux-translator/blob/master/screenshots/tmux-translator.png?raw=true)
 
 # Installation
 
