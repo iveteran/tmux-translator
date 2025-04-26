@@ -1,23 +1,29 @@
 [English](./README.md) | [中文](./README-zh.md)
 
-![](https://gitlab.com/sainnhe/img/-/raw/master/translator.png)
+![](https://gitlab.com/iveteran/img/-/raw/master/translator.png)
 
 # Installation
 
 ## Requirements
 
 - tmux >= 3.2
-- [skywind3000/translator#requirements](https://github.com/skywind3000/translator#requirements)
+- [iveteran/translator#requirements](https://github.com/iveteran/translator#requirements)
 
 ## Install via [TPM](https://github.com/tmux-plugins/tpm/)
 
 Add this line to your `~/.tmux.conf`:
 
 ```tmux
-set -g @plugin 'sainnhe/tmux-translator'
+set -g @plugin 'iveteran/tmux-translator'
 ```
 
 Reload the configuration and press `prefix` + `I`
+
+Install translator engine:
+```
+cd ~/.tmux/tmux-translator/
+git submodule update --init --recursive
+```
 
 # Usage
 
@@ -49,7 +55,7 @@ set -g @tmux-translator-engine "google"
 set -g @tmux-translator-engine "google|ciba|youdao"
 ```
 
-See [skywind3000/translator#engines](https://github.com/skywind3000/translator#engines) for all available engines.
+See [iveteran/translator#engines](https://github.com/iveteran/translator#engines) for all available engines.
 
 # More plugins
 
@@ -57,7 +63,7 @@ See [skywind3000/translator#engines](https://github.com/skywind3000/translator#e
 
 # License
 
-For the code in the `/engine` directory, see [skywind3000/translator](https://github.com/skywind3000/translator).
+For the code in the `/engine` directory, see [iveteran/translator](https://github.com/iveteran/translator).
 
 Other code is distributed under [MIT](./LICENSE) license.
 

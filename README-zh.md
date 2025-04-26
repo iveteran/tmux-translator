@@ -1,21 +1,27 @@
-![](https://gitlab.com/sainnhe/img/-/raw/master/translator.png)
+![](https://gitlab.com/iveteran/img/-/raw/master/translator.png)
 
 # 安装
 
 ## 依赖
 
 - tmux >= 3.2
-- [skywind3000/translator#requirements](https://github.com/skywind3000/translator#requirements)
+- [iveteran/translator#requirements](https://github.com/iveteran/translator#requirements)
 
 ## 通过 [TPM](https://github.com/tmux-plugins/tpm/) 安装
 
 把这一行添加到 `~/.tmux.conf`
 
 ```tmux
-set -g @plugin 'sainnhe/tmux-translator'
+set -g @plugin 'iveteran/tmux-translator'
 ```
 
 重新加载配置，然后按 `prefix` + `I`
+
+如果tmux plug manager没有安装翻译引擎, 需安装翻译引擎(git submodule):
+```
+cd ~/.tmux/tmux-translator/
+git submodule update --init --recursive
+```
 
 # 使用方法
 
@@ -45,15 +51,15 @@ set -g @tmux-translator-engine "google"
 set -g @tmux-translator-engine "google|ciba|youdao"
 ```
 
-这里列出了所有可用引擎：[skywind3000/translator#engines](https://github.com/skywind3000/translator#engines)
+这里列出了所有可用引擎：[iveteran/translator#engines](https://github.com/iveteran/translator#engines)
 
 # 更多插件
 
-- [sainnhe/tmux-fzf](https://github.com/sainnhe/tmux-fzf): 用 FZF 管理 tmux sessions, windows, panes 等等。
+- [iveteran/tmux-fzf](https://github.com/iveteran/tmux-fzf): 用 FZF 管理 tmux sessions, windows, panes 等等。
 
 # 许可
 
-`/engine` 目录下的代码参考 [skywind3000/translator](https://github.com/skywind3000/translator)
+`/engine` 目录下的代码参考 [iveteran/translator](https://github.com/iveteran/translator)
 
 其余部分的代码以 [MIT](./LICENSE) 许可分发。
 
