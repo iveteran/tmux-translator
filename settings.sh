@@ -1,10 +1,10 @@
 default_launch_key="t"
 launch_key="@tmux-translator"
 
-default_width="38%"
+default_width="45%"
 width="@tmux-translator-width"
 
-default_height="38%"
+default_height="45%"
 height="@tmux-translator-height"
 
 default_from="en"
